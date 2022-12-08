@@ -1,0 +1,48 @@
+POST  http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "zet",
+    "password": "zet"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "admin3",
+    "password": "admin"
+}
+
+###
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzkwNzIwMWE0ZDZkZmJjMjBmZjA4M2MiLCJpYXQiOjE2NzA0NzA4MzJ9.38NE49-c8-BBRULB3fS-wauM9VEXkCakrfR0V_Xa82A
+
+{
+    "title": "my second post",
+    "description": "abczyz",
+    "url":"shopee.com",
+    "status": "LEARNED"
+}
+
+###
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzkwNzIwMWE0ZDZkZmJjMjBmZjA4M2MiLCJpYXQiOjE2NzA0NzE2MzV9.XXY1yACGKa0s2s0UIE3lE35L2xDOpRP-bClabFcxfK0
+
+###
+PUT  http://localhost:5000/api/posts/639150f732f0ebeb148bf11c
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzkwNzIwMWE0ZDZkZmJjMjBmZjA4M2MiLCJpYXQiOjE2NzA0NzE2MzV9.XXY1yACGKa0s2s0UIE3lE35L2xDOpRP-bClabFcxfK0
+
+{
+    "title":"React",
+    "description":"React for developers",
+    "url":"reactjs.org",
+    "status":"LEARNING"
+}
+
+###
+DELETE  http://localhost:5000/api/posts/63915ce0996c92799637001b
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzkwNzIwMWE0ZDZkZmJjMjBmZjA4M2MiLCJpYXQiOjE2NzA0NzE2MzV9.XXY1yACGKa0s2s0UIE3lE35L2xDOpRP-bClabFcxfK0
