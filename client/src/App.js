@@ -4,6 +4,7 @@ import Landing from "./components/layout/Landing";
 import Auth from "./views/Auth";
 import Dashboard from "./views/Dashboard";
 import AuthContextProvider from "./contexts/AuthContext";
+import ProtectedRoute from "./components/routing/ProtectedRoute";
 
 function App() {
   return (
