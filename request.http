@@ -11,25 +11,25 @@ POST http://localhost:5000/api/auth/login
 Content-Type: application/json
 
 {
-    "username": "admin3",
-    "password": "admin"
+    "username": "zet",
+    "password": "zet"
 }
 
 ###
 POST http://localhost:5000/api/posts
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzkwNzIwMWE0ZDZkZmJjMjBmZjA4M2MiLCJpYXQiOjE2NzA0NzA4MzJ9.38NE49-c8-BBRULB3fS-wauM9VEXkCakrfR0V_Xa82A
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzkyYmJiNGEyZWNkNTI0NjhlZGRkNDMiLCJpYXQiOjE2NzA1NzMwNjl9.0F9lvPWG9foBQVIoJ2YQj8Tm_Rx8mWsMRatbsUxJGXA
 
 {
-    "title": "my second post",
-    "description": "abczyz",
-    "url":"shopee.com",
-    "status": "LEARNED"
+    "title": "third post",
+    "description": "third post description",
+    "url":"bootstrap.org",
+    "status": "TO LEARN"
 }
 
 ###
 GET http://localhost:5000/api/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzkwNzIwMWE0ZDZkZmJjMjBmZjA4M2MiLCJpYXQiOjE2NzA0NzE2MzV9.XXY1yACGKa0s2s0UIE3lE35L2xDOpRP-bClabFcxfK0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzkyYmJiNGEyZWNkNTI0NjhlZGRkNDMiLCJpYXQiOjE2NzA1NzMwNjl9.0F9lvPWG9foBQVIoJ2YQj8Tm_Rx8mWsMRatbsUxJGXA
 
 ###
 PUT  http://localhost:5000/api/posts/639150f732f0ebeb148bf11c

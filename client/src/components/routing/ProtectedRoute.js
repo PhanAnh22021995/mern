@@ -1,9 +1,10 @@
-import { Route, useNavigate } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 import Spinner from "react-bootstrap/Spinner";
+import NavbarMenu from "../layout/NavbarMenu";
 
-const ProtectedRoute = ({ component: Component, ...rest }) => {
+const ProtectedRoute = ({ children }) => {
   const navigate = useNavigate();
   const {
     authState: { authLoading, isAuthenticated },
@@ -16,11 +17,15 @@ const ProtectedRoute = ({ component: Component, ...rest }) => {
       </div>
     );
 
-  return (
-    <Route
-      {...rest}
-      element={isAuthenticated ? <Component /> : navigate("/login")}
-    />
+  return isAuthenticated ? (
+    <>
+      <NavbarMenu />
+      <Routes>
+        <Route path="/" element={children} />
+      </Routes>
+    </>
+  ) : (
+    navigate("/login", { replace: true })
   );
 };
 
