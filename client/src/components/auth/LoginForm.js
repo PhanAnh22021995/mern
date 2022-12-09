@@ -1,21 +1,21 @@
 import React, { useState, useContext } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
+import AlertMessage from "../layout/AlertMessage";
 
 function LoginForm() {
   // Context
   const { loginUser } = useContext(AuthContext);
-
-  // Router
-  const navigate = useNavigate();
 
   // Local state
   const [loginForm, setLoginForm] = useState({
     username: "",
     password: "",
   });
+
+  const [alert, setAlert] = useState(null);
 
   const { username, password } = loginForm;
 
@@ -26,9 +26,9 @@ function LoginForm() {
     event.preventDefault();
     try {
       const loginData = await loginUser(loginForm);
-      if (loginData.success) {
-        navigate("/dashboard");
-      } else {
+      if (!loginData.success) {
+        setAlert({ type: "danger", message: loginData.message });
+        setTimeout(() => setAlert(null), 5000);
       }
     } catch (error) {
       console.log(error);
@@ -38,6 +38,7 @@ function LoginForm() {
   return (
     <>
       <Form className="my-4" onSubmit={login}>
+        <AlertMessage info={alert} />
         <Form.Group className="mb-3">
           <Form.Control
             type="text"
@@ -56,6 +57,7 @@ function LoginForm() {
             required
             value={password}
             onChange={onChangeLoginForm}
+            autoComplete="true"
           />
         </Form.Group>
         <Button variant="success" type="submit">
