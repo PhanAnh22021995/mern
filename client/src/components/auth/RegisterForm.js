@@ -90,7 +90,7 @@ function RegisterForm() {
         Already have an account?
         <Link to="/login">
           <Button variant="info" size="sm" className="ml-2">
-            Register
+            Login
           </Button>
         </Link>
       </p>
