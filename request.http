@@ -29,7 +29,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzkyY
 
 ###
 GET http://localhost:5000/api/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzkyYmJiNGEyZWNkNTI0NjhlZGRkNDMiLCJpYXQiOjE2NzA1NzMwNjl9.0F9lvPWG9foBQVIoJ2YQj8Tm_Rx8mWsMRatbsUxJGXA
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mzk2YjEzZjI5Y2ZkMDBmOTFjM2VhNGQiLCJpYXQiOjE2NzA4OTgzMTR9.8L5rADoZQfoRJNZuEKLkB1mfsOFFRWpl_WYRJVtCCFc
 
 ###
 PUT  http://localhost:5000/api/posts/639150f732f0ebeb148bf11c

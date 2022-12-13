@@ -34,7 +34,6 @@ const Dashboard = () => {
   useEffect(() => {
     getPosts();
   }, []);
-
   let body = null;
 
   if (postsLoading) {
